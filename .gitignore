@@ -1,0 +1,8 @@
+# npm pack
+*.tgz
+
+# node modules
+node_modules/
+
+*.txt
+*.swp
