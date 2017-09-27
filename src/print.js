@@ -34,8 +34,7 @@ function print(file) {
       smptConfig.auth.pass = auth.pass;
       let mailOptions = {
          from: '<' + smptConfig.auth.user + '>',
-         // to: 'mobileprint@pitt.edu',
-         to: 'djm158@pitt.edu',
+         to: 'mobileprint@pitt.edu',
          attachments: [
             {
                filename: file,
