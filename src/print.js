@@ -7,7 +7,7 @@ var fs = require('fs');
 
 
 var printer = {
-   handler: argv => print(argv.filename),
+   handler: argv => print(argv.file),
    builder: {}
 };
 
@@ -25,7 +25,7 @@ let smptConfig = {
 function print(file) {
 
    if(!fs.existsSync(file)) {
-      console.error('Error: file does not exist, please enter valid file path.');
+      console.error('Error:' + file + ' does not exist, please enter valid file path.');
       process.exit(-1);
    }
 
@@ -34,10 +34,12 @@ function print(file) {
       smptConfig.auth.pass = auth.pass;
       let mailOptions = {
          from: '<' + smptConfig.auth.user + '>',
-         to: 'mobileprint@pitt.edu',
+         // to: 'mobileprint@pitt.edu',
+         to: 'djm158@pitt.edu',
          attachments: [
             {
-               filename: file
+               filename: file,
+               path: file
             }
          ]
       };
