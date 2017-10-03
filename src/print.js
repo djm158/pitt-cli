@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 var nodemailer = require('nodemailer');
 const ora = require('ora');
 var creds = require('./credentials.js');
