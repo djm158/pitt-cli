@@ -10,10 +10,20 @@
   "bin": {
     "pitt": "./bin/pitt"
   },
+  "engines": {
+    "node": ">=6.11.0"
+  },
   "dependencies": {
     "inquirer": "^3.3.0",
     "nodemailer": "^4.1.0",
     "ora": "^1.3.0",
+    "request": "^2.83.0",
     "yargs": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "prettier": "^1.7.3"
   }
 }

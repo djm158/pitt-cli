@@ -1,0 +1,9 @@
+// .eslintrc
+
+{
+    "plugins": ["node", "prettier"],
+    "extends": ["plugin:node/recommended"],
+    "rules": {
+        "node/exports-style": ["error", "module.exports"],
+    }
+}

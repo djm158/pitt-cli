@@ -48,6 +48,8 @@ function print(file) {
          if (error) {
             console.log(error);
          }
+
+         console.log(info);
       });
    });
 
