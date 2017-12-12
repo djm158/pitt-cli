@@ -17,7 +17,7 @@ send email to recipients
 * `-C` prompts for recipients to cc on the email
 * if no subject or body defined, user will be prompted for them
 * multiple recipients must be seperated by commas ex. 
-   ```pitt email "recipient1@pitt.edu, recipient2@pitt.edu" "subject" "body"
+   ```pitt email "recipient1@pitt.edu, recipient2@pitt.edu" "subject" "body"```
 
 ## TODO:
 - [X] allow users to configure sending email to anyone
