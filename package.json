@@ -1,11 +1,11 @@
 {
-  "name": "pitt-cli",
-  "version": "1.0.2",
-  "description": "CLI for University of Pittsburgh utilities",
+  "name": "pitt",
+  "version": "1.0.4",
+  "description": "CLI for University of Pittsburgh utilities - fork off of djm158's pitt-cli",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Daniel McGrath <djm158@pitt.edu>",
+  "author": "Brian Choromanski <BrianChoromanski@gmail.com>",
   "license": "ISC",
   "bin": {
     "pitt": "./bin/pitt"

@@ -4,7 +4,7 @@
 
 ## installation
 
-```[sudo] npm install -g pitt-cli``` 
+```[sudo] npm install -g pitt``` 
 
 ## available commands:
 
