@@ -7,10 +7,10 @@
 ```[sudo] npm install -g pitt-cli``` 
 
 ## available commands:
-* print
-  * send file to mobileprint@pitt.edu
 
-```pitt print path/to/file```
+```pitt print [-c] path/to/file```
+* send file to mobileprint@pitt.edu
+* -c send file to colorprint@pitt.edu
 
 ## TODO:
 - [ ] allow users to configure sending email to anyone
