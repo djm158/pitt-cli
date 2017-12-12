@@ -12,7 +12,7 @@
 send file to mobileprint@pitt.edu
 * `-c` send file to colorprint@pitt.edu
 
-```pitt email [-C] "recipients" ["subject"] ["body"]
+```pitt email [-C] "recipients" ["subject"] ["body"]```
 send email to recipients
 * `-C` prompts for recipients to cc on the email
 * if no subject or body defined, user will be prompted for them
