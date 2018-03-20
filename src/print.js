@@ -2,7 +2,12 @@ var nodemailer = require('nodemailer');
 const ora = require('ora');
 var creds = require('./credentials.js');
 var fs = require('fs');
-
+var argv = require('yargs')
+   .option('c', {
+      alias: 'color',
+      describe: 'Print to color printer',
+      type: 'boolean'
+   })
 
 var printer = {
    handler: argv => print(argv.file, argv.c),
