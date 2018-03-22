@@ -8,7 +8,7 @@ var argv = require('yargs')
 				alias: 'carbon-copy',
 				describe: 'carbon-copy someone on the email',
 				type: 'boolean'
-	})
+	});
 
 
 var sendEmail = {
@@ -25,7 +25,7 @@ let smptConfig = {
 		user: '',
 		pass: ''
 	}
-}
+};
 
 function email(recip, sub, body, cc) {
 	if(!sub){

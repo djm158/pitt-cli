@@ -6,4 +6,4 @@ module.exports =
 		.command('thoth', 'connect to thoth.cs.pitt.edu via ssh', require('../src/thoth'))
 		.command('configure [env]', 'configure dev environments in Pitt computing labs', require('../src/configure'))
 		.demandCommand(1,'Please supply at least one command')
-		.argv
+		.argv;

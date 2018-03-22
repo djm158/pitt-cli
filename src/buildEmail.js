@@ -16,7 +16,7 @@ function emailPrompt(callback) {
 	];
 
 	inquirer.prompt(prompt).then(callback);
-};
+}
 
 function emailPromptCc(callback) {
 	let prompt = [
@@ -38,7 +38,7 @@ function emailPromptCc(callback) {
 	];
 
 	inquirer.prompt(prompt).then(callback);
-};
+}
 
 function emailBody(callback) {
 	let prompt = [
@@ -50,7 +50,7 @@ function emailBody(callback) {
 	];
 
 	inquirer.prompt(prompt).then(callback);
-};
+}
 
 function emailBodyCc(callback) {
 	let prompt = [
@@ -67,7 +67,7 @@ function emailBodyCc(callback) {
 	];
 
 	inquirer.prompt(prompt).then(callback);
-};
+}
 
 function emailCc(callback) {
 	let prompt = [
@@ -79,7 +79,7 @@ function emailCc(callback) {
 	];
 
 	inquirer.prompt(prompt).then(callback);
-};
+}
 
 
 exports.getInfo = emailPrompt;

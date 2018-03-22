@@ -16,7 +16,7 @@ function credentialsPrompt(callback) {
 	];
 
 	inquirer.prompt(prompt).then(callback);
-};
+}
 
 function namePrompt(callback) {
 	let prompt = [
@@ -28,7 +28,7 @@ function namePrompt(callback) {
 	];
 
 	inquirer.prompt(prompt).then(callback);
-};
+}
 
 exports.getName = namePrompt;
 exports.getCredentials = credentialsPrompt;

@@ -1,6 +1,10 @@
-# Pitt-Cli
+# Pitt-Cli - CLI for Pitt Students
 
-### CLI for Pitt Students
+[![NPM](https://nodei.co/npm/pitt-cli.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/pitt-cli/)
+
+[![Build Status](https://travis-ci.org/djm158/pitt-cli.svg?branch=master)](https://travis-ci.org/djm158/pitt-cli)
+[![David Status](https://david-dm.org/djm158/pitt-cli.svg)](https://david-dm.org/djm158/pitt-cli)
+[![npm](https://img.shields.io/npm/dt/pitt-cli.svg)](https://www.npmjs.com/package/pitt-cli)
 
 ## Installation
 

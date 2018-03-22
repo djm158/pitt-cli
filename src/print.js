@@ -7,7 +7,7 @@ var argv = require('yargs')
 		alias: 'color',
 		describe: 'Print to color printer',
 		type: 'boolean'
-	})
+	});
 
 var printer = {
 	handler: argv => print(argv.file, argv.c),
@@ -23,7 +23,7 @@ let smptConfig = {
 		user: '',
 		pass: ''
 	}
-}
+};
 
 function print(file, color) {
 
