@@ -1,8 +1,9 @@
 
 module.exports =
-   require('yargs')
-      .command('print <file> [files..]', 'print a file or multiple files', require('../src/print'))
-      .command('email <recipients> [subject] [body]', 'send email to recipients', require('../src/sendEmail'))
-      .command('configure [env]', 'configure dev environments in Pitt computing labs', require('../src/configure'))
-      .demandCommand(1,'Please supply at least one command')
-      .argv
+	require('yargs')
+		.command('print <file> [files..]', 'print a file or multiple files', require('../src/print'))
+		.command('email <recipients> [subject] [body]', 'send email to recipients', require('../src/sendEmail'))
+		.command('thoth', 'connect to thoth.cs.pitt.edu via ssh', require('../src/thoth'))
+		.command('configure [env]', 'configure dev environments in Pitt computing labs', require('../src/configure'))
+		.demandCommand(1,'Please supply at least one command')
+		.argv

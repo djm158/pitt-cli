@@ -1,22 +1,25 @@
-# pitt-cli
+# Pitt-Cli
 
-### cli for pitt students
+### CLI for Pitt Students
 
-## installation
+## Installation
 
-```[sudo] npm install -g pitt-cli``` 
+`[sudo] npm install -g pitt-cli` 
 
-## available commands:
+## Available Commands:
 
-```pitt print [-c] path/to/file```
+`pitt print [-c] path/to/file`
 * send file to mobileprint@pitt.edu
 	* `-c` send file to colorprint@pitt.edu
 
-```pitt email [-cc] "recipients" ["subject"] ["body"]```
+`pitt email [-cc] "recipients" ["subject"] ["body"]`
 * send email to recipients
+    * `-cc` prompts for recipients to cc on the email
 * if no subject or body defined, user will be prompted for them
-* multiple recipients must be seperated by commas ex. ```pitt email "recipient1@pitt.edu, recipient2@pitt.edu" "subject" "body"```
-	* `-cc` prompts for recipients to cc on the email
+* multiple recipients must be seperated by commas ex. `pitt email "recipient1@pitt.edu, recipient2@pitt.edu" "subject" "body"`
+
+`pitt thoth`
+* connect to thoth.cs.pitt.edu via SSH
 
 
 ## TODO:
