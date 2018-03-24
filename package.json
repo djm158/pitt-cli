@@ -16,6 +16,9 @@
     "Print"
   ],
   "author": "Daniel McGrath <djm158@pitt.edu>",
+  "contributors": [
+    "Brian Choromanski <BrianChoromanski@gmail.com> (http://BrianChoromanski.com/)"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/djm158/pitt-cli/issues"

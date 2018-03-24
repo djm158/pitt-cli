@@ -10,32 +10,57 @@
 
 ## Installation
 
-`[sudo] npm install -g pitt-cli` 
+```console
+$ [sudo] npm install -g pitt-cli
+```
 
 ## Available Commands:
 
-`pitt print [-c] path/to/file`
-* send file to mobileprint@pitt.edu
-	* `-c` send file to colorprint@pitt.edu
+- **Print** - send file to mobileprint@pitt.edu
+  
+  ```console
+  $ pitt print [-c] path/to/file
+  ```
+  
+  `-c` send file to colorprint@pitt.edu
+  
+- **Email** - send email from pitt email
 
-`pitt email [-cc] "recipients" ["subject"] ["body"]`
-* send email to recipients
-    * `-cc` prompts for recipients to cc on the email
-* if no subject or body defined, user will be prompted for them
-* multiple recipients must be seperated by commas ex. `pitt email "recipient1@pitt.edu, recipient2@pitt.edu" "subject" "body"`
+  ```console
+  $ pitt email [-cc] "recipients" ["subject"] ["body"]
+  ```
+  
+  `-cc` prompts for recipients to cc on the email
 
-`pitt ssh`
-* connect to unixs.cssd.pitt.edu via SSH
+  * If no subject or body defined, user will be prompted for them
+  * Multiple recipients must be seperated by commas ex. `pitt email "recipient1@pitt.edu, recipient2@pitt.edu" "subject" "body"`
 
-`pitt thoth`
-* connect to thoth.cs.pitt.edu via SSH
+- **SSH** - connect to unixs.cssd.pitt.edu
 
-`pitt deploy "directory"`
-* deploy given directory to your personal Pitt website
-* backups stored to ~/.html-backup directory on unixs.cssd.pitt.edu
+  ```console
+  $ pitt ssh
+  ```
+  
+- **THOTH** - connect to thoth.cs.pitt.edu
 
-`pitt --help`
-* display help message
+  ```console
+  $ pitt thoth
+  ```
+
+- **Deploy** - deploy given directory to your personal Pitt website
+
+  ```console
+  $ pitt deploy "directory"
+  ```
+  
+    * backups saved to ~/.html-backup directory on unixs.cssd.pitt.edu
+  
+- **Help**
+
+  ```console
+  $ pitt --help
+  ```
+
 
 ## TODO:
 - [ ] integrate blackboard api
