@@ -1,5 +1,7 @@
 var nodemailer = require('nodemailer');
 const ora = require('ora');
+const wkhtmltopdf = require('wkhtmltopdf');
+var execSh = require('exec-sh');
 var creds = require('./credentials.js');
 var fs = require('fs');
 var argv = require('yargs')
@@ -7,10 +9,15 @@ var argv = require('yargs')
 		alias: 'color',
 		describe: 'Print to color printer',
 		type: 'boolean'
+	})
+	.option('l', {
+		alias: 'link',
+		describe: 'Print a link',
+		type: 'boolean'
 	});
 
 var printer = {
-	handler: argv => print(argv.file, argv.c),
+	handler: argv => downloader(argv.file, argv.c, argv.l),
 	builder: {}
 };
 
@@ -24,6 +31,22 @@ let smptConfig = {
 		pass: ''
 	}
 };
+
+function downloader(file, color, link){
+
+	if(link){
+		if(file.substring(0,7) != "http://" && file.substring(0,8) != "https://"){
+			file = 'http://' + file;
+		}
+		wkhtmltopdf(file, { pageSize: 'letter', output: 'pitt-print.pdf' }, function(err){
+			print('pitt-print.pdf', color);
+		});
+
+	}else{
+		print(file, color);
+	}
+
+}
 
 function print(file, color) {
 
@@ -56,7 +79,14 @@ function print(file, color) {
 			if (error) {
 				console.log(error);
 			}
-				console.log(info);
+			if(file == 'pitt-print.pdf'){
+				execSh('rm pitt-print.pdf', { cwd: "./" }, function(err){
+					if (err) {
+						console.log("Exit code: ", err.code);
+						return;
+					}
+				});
+			}
 		});
 	});
 }

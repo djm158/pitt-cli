@@ -1,6 +1,6 @@
 {
   "name": "pitt-cli",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "CLI for University of Pittsburgh utilities",
   "scripts": {
     "test": "jshint src/*"
@@ -38,6 +38,7 @@
     "request": "^2.85.0",
     "scp2": "^0.5.0",
     "ssh-exec": "^2.0.0",
+    "wkhtmltopdf": "^0.3.4",
     "yargs": "^11.0.0"
   },
   "devDependencies": {

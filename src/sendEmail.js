@@ -68,7 +68,6 @@ function genEmail(recip, sub, body, carbon){
 			if (error) {
 				console.log(error);
 			}
-			console.log(info);
 		});
 	});
 }

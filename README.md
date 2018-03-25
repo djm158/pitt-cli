@@ -14,6 +14,8 @@
 $ [sudo] npm install -g pitt-cli
 ```
 
+In order to use print link functionality [wkhtmltopdf](https://wkhtmltopdf.org/) must be installed on your system.
+
 ## Available Commands:
 
 - **Print** - send file to mobileprint@pitt.edu
@@ -23,6 +25,8 @@ $ [sudo] npm install -g pitt-cli
   ```
   
   `-c` send file to colorprint@pitt.edu
+
+  `-l` send link to printer instead of file
   
 - **Email** - send email from pitt email
 
