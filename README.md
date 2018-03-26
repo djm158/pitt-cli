@@ -14,14 +14,24 @@
 $ [sudo] npm install -g pitt-cli
 ```
 
+### Optional Installation
+
 In order to use print link functionality [wkhtmltopdf](https://wkhtmltopdf.org/) must be installed on your system.
+
+Linux users can run the command:
+
+```console
+$ pitt setup
+```
+
+Windows/OS X users can download wkhtmltopdf from [here.](https://wkhtmltopdf.org/downloads.html)
 
 ## Available Commands:
 
 - **Print** - send file to mobileprint@pitt.edu
   
   ```console
-  $ pitt print [-c] path/to/file
+  $ pitt print [args] path/to/file
   ```
   
   `-c` send file to colorprint@pitt.edu
@@ -59,6 +69,12 @@ In order to use print link functionality [wkhtmltopdf](https://wkhtmltopdf.org/)
   
     * backups saved to ~/.html-backup directory on unixs.cssd.pitt.edu
   
+- **setup** - install wkhtmltopdf onto your system
+
+  ```console
+  $ pitt setup
+  ```
+
 - **Help**
 
   ```console

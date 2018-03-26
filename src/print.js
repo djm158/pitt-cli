@@ -1,4 +1,5 @@
 var nodemailer = require('nodemailer');
+var commandExists = require('command-exists').sync;
 const ora = require('ora');
 const wkhtmltopdf = require('wkhtmltopdf');
 var execSh = require('exec-sh');
@@ -35,12 +36,16 @@ let smptConfig = {
 function downloader(file, color, link){
 
 	if(link){
-		if(file.substring(0,7) != "http://" && file.substring(0,8) != "https://"){
-			file = 'http://' + file;
+		if(commandExists('wkhtmltopdf')){
+			if(file.substring(0,7) != "http://" && file.substring(0,8) != "https://"){
+				file = 'http://' + file;
+			}
+			wkhtmltopdf(file, { pageSize: 'letter', output: 'pitt-print.pdf' }, function(err){
+				print('pitt-print.pdf', color);
+			});
+		}else{
+			console.log('wkhtmltopdf not installed on your system, install it with the command:\npitt setup');
 		}
-		wkhtmltopdf(file, { pageSize: 'letter', output: 'pitt-print.pdf' }, function(err){
-			print('pitt-print.pdf', color);
-		});
 
 	}else{
 		print(file, color);

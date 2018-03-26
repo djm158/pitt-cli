@@ -1,6 +1,6 @@
 {
   "name": "pitt-cli",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "CLI for University of Pittsburgh utilities",
   "scripts": {
     "test": "jshint src/*"
@@ -31,6 +31,7 @@
     "node": ">=6.11.0"
   },
   "dependencies": {
+    "command-exists": "^1.2.2",
     "exec-sh": "^0.2.1",
     "inquirer": "^5.1.0",
     "nodemailer": "^4.6.3",
