@@ -17,7 +17,7 @@ var argv = require('yargs')
 	});
 
 var printer = {
-	handler: argv => downloader(argv.file, argv.c, argv.l),
+	handler: argv => downloader(argv.file, argv.files, argv.c, argv.l),
 	builder: {}
 };
 
@@ -32,7 +32,7 @@ let smptConfig = {
 	}
 };
 
-function downloader(file, color, link){
+function downloader(file, files, color, link){
 
 	if(link){
 		if(file.substring(0,7) != "http://" && file.substring(0,8) != "https://"){
@@ -43,12 +43,14 @@ function downloader(file, color, link){
 		});
 
 	}else{
-		print(file, color);
+		print(file, files, color);
 	}
 
 }
 
-function print(file, color) {
+function print(file, files, color) {
+	console.log(files);
+	console.log(Array.isArray(files));
 
 	if(!fs.existsSync(file)) {
 		console.error('Error:' + file + ' does not exist, please enter valid file path.');

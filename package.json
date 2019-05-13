@@ -1,6 +1,6 @@
 {
   "name": "pitt-cli",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "CLI for University of Pittsburgh utilities",
   "scripts": {
     "test": "jshint src/*"
